@@ -2,6 +2,9 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=c,c++
 
 ### C ###
+# vscode
+.vscode/
+
 # Prerequisites
 *.d
 
@@ -39,6 +42,7 @@
 *.i*86
 *.x86_64
 *.hex
+*.o
 
 # Debug files
 *.dSYM/
