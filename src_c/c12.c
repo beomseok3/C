@@ -47,13 +47,22 @@ void main() {
     int i = 5;
 
     int* p = &i; // int 변수 i의 주소를 저장할 수 있는 변수 p(&은 실제 주소)
+    
+    // char*p = &i; pointer는 변수와 식별자를 맞춰야한다
     printf("%d\n",*p);
 
-    printf("%p\n",&i);
-    printf("%llu\n",&i); //메모리 주소
+    printf("16진수:%p\n",&i);
+    
+    printf("10진수:%llu\n",&i); //메모리 주소(실제로는 2진수)
     printf("%llu\n",p); //메모리 주소
 
     *p = 10; // p의 주소로 찾아간다, p의 주소로 가면 4byte 공간이 있고 그곳에는 5가 들어있음, 그것을 10으로 바꾼다.
     printf("%d\n",i);
+
+    printf("%ld\n",sizeof(int));
+    printf("%ld\n",sizeof(p));
+    printf("%ld\n",sizeof(&i)); //포인터 변수와 주소 모두 8byte
+    printf("%ld\n",sizeof(float));
+    // printf("%d\n",sizeof(int));
 
 }
