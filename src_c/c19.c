@@ -15,8 +15,10 @@ int main(void) {
     int *p1;
     p1 = &i;
     *p1 = 50;
-
-
+/*
+(gdb) whatis p1
+type = int *
+*/
 
     // 수정가능지역 끝
 
@@ -27,6 +29,8 @@ int main(void) {
     // 수정가능지역 끝
 
     printf("i : %d\n", i);
+
+
 /*Dump of assembler code for function changer:
    0x0000000000001169 <+0>:	endbr64 
    0x000000000000116d <+4>:	push   %rbp
